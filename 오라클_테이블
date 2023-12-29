@@ -1,0 +1,38 @@
+create table Member(
+    m_id varchar2(255) not null primary key,
+    password varchar2(255) not null,
+    phone varchar2 (255) not null,
+    email varchar2(255) null,
+    regdate date default sysdate,
+    addr varchar2(255),
+    role varchar2(255) default 'user'
+);
+
+create table product (
+    p_id number(5)  not null primary key,  
+    name varchar2(255) not null,              
+    price number(8,2) not null,                    
+    content varchar2(2000),                        
+    regdate date default sysdate              
+    );
+
+create table m_board (
+    id number(5) not null primary key,
+    M_title varchar2 (255) not null ,
+    M_write varchar2(255) not null,
+    M_cont varchar2 (255) not null,
+    regdate date default sysdate,
+    cnt number(5) default 0
+    );
+
+insert into m_board (id,m_title,m_write,m_cont,regdate)
+VALUES (0,'1','1','1',to_date( 770814,'YYMMDD'));
+
+select * from product;
+
+insert into member (m_id,password,phone,email,,role)
+VALUES('kseo;','aaaaa','01011111111','admin');
+
+drop table product;
+delete from member;
+commit;
