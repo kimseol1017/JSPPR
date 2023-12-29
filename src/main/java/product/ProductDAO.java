@@ -102,7 +102,7 @@ public class ProductDAO {
 				product.setName(rs.getString("name"));
 				product.setPrice(rs.getInt("price"));
 				product.setContent(rs.getString("content"));
-				
+				product.setRegdate(rs.getDate("regdate"));
 				System.out.println(" 레코드 저장성공");
 				
 			}

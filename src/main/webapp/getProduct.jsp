@@ -48,7 +48,7 @@
 		</table>
 		
 	</form>
-	<a href = "deleteProduct.pr?id=<%=product.getP_id() %>" >
+	<a href = "deleteProduct.pr?p_id=<%=product.getP_id() %>" >
 		상품 삭제 
 	</a>
 	
