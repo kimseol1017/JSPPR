@@ -100,11 +100,14 @@ public class Product_Controller extends HttpServlet {
 			String name = request.getParameter("name");
 			int price = Integer.parseInt(request.getParameter("price"));
 			String content = request.getParameter("content");
+			int p_id = Integer.parseInt(request.getParameter("p_id"));
+
 			
 			ProductDTO dto = new ProductDTO();
 			dto.setName(name);
 			dto.setPrice(price);
 			dto.setContent(content);
+			dto.setP_id(p_id);
 			
 			ProductDAO dao = new ProductDAO();
 			dao.updateproduct(dto);

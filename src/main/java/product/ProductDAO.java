@@ -126,6 +126,7 @@ public class ProductDAO {
 			pstmt.setString(1,dto.getName());
 			pstmt.setInt(2,dto.getPrice());
 			pstmt.setString(3,dto.getContent());
+			pstmt.setInt(4,dto.getP_id());
 			
 			pstmt.executeUpdate();
 			

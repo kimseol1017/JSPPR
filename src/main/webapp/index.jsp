@@ -27,7 +27,11 @@
 	<p />
 	<a href="LoginForm.jsp"> 로그인 페이지 </a>
 	<p />
-	
+	<% }else if(sessionRole.equals(null)){%>
+	<h1>로그인 후 이용하세요</h1>
+	<p />
+	<a href="LoginForm.jsp"> 로그인 페이지 </a>
+	<p />
 	<% }else{%>
 	<h2>index 페이지</h2>
 	<hr>
